@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章详情</title>
+    <style>
+        body,ul,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{  padding: 0px;  margin: 0px;  font-family: Arial; }
+        li{  list-style: none;  }
+        image{border: none;}
+        a{text-decoration: none;}
+        a:hover{text-decoration: none;}
+        body{
+            background:#f9fafd;
+            box-shadow:0 2px 4px 0 rgba(0,0,0,0.02);
+        }
+
+        /*头部导航栏样式*/
+        .top{
+            margin: 0px;
+            padding: 0px;
+            width:auto;
+            height: 120px;
+            background: #fedc00;
+            box-shadow:0 2px 16px 0 #8b572a;
+
+
+        }
+        #logo{
+            margin-top: 40px;
+            margin-left: 32px;
+            float: left;
+
+
+        }
+        .top ul li {
+            float: left;
+        }
+        #menu li{
+            margin-top: 50px;
+            font-size:25px;
+            color:#505152;
+            margin-left: 5%;
+        }
+        /*头部导航栏鼠标移入动效*/
+        #menu li:hover{
+            font-family:PingFangSC-Semibold;
+            color:#505152;
+        }
+
+        #top_bar{
+            margin-top: 50px;
+            float: right;
+            font-size:25px;
+            color:#505152;
+            margin-right: 20px;
+        }
+        /*注册登录移入动效*/
+        #top_bar li:hover{
+            font-family:PingFangSC-Semibold;
+            color:#505152;
+        }
+        /*搜索框*/
+        #search{
+            /*background: green;*/
+            position: absolute;
+            top: 90px;
+            right: 75px;
+        }
+        #search-circle{
+            width: 74px;
+            height: 74px;
+            background-color: #e93f33;
+            -webkit-border-radius: 100px;
+            transition: 0.5s;
+        }
+        /*搜索框移入动效*/
+        /*#search-circle:hover{*/
+        /*width: 250px;*/
+        /*}*/
+        #search-circle img{
+            /*background: blue;*/
+            position: relative;
+            top: 17px;
+            left: 17px;
+        }
+        #search #search-input{
+            display: none;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 20px;
+            position: relative;
+            left: 60px;
+            top: -15px;
+            color: #FFFFFF;
+
+        }
+        #search-input::-webkit-input-placeholder{
+            color: #FFFFFF;
+        }
+
+        /*通知*/
+        #message{
+            position: absolute;
+            top: 220px;
+            right: 20px;
+            /*background: yellow;*/
+        }
+        #message #message_text{
+            /*background: blue;*/
+            width: 115px;
+            position: relative;
+            top: 65px;
+            left: 24px;
+        }
+
+
+
+
+        /*文章内容部分*/
+        #body{
+            /*background: blue;*/
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 60px;
+
+
+        }
+        #body-left {
+            /*background: #FFFFFF;*/
+            float: left;
+            width: 900px;
+        }
+        #body-left #article-box{
+            /*background: red;*/
+            width: 100%;
+        }
+        #body-left #article-top{
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        #body-left #article-top #article-title{
+            /*background: red;*/
+            width: 100%;
+            font-family:PingFangSC-Semibold;
+            font-size:25px;
+            color:#4a4a4a;
+
+        }
+        #body-left #article-top #article-message{
+            /*background: palegoldenrod;*/
+
+
+        }
+        #body-left #article-top #article-message #article-user{
+            float: left;
+            /*width: 80px;*/
+            height: 50px;
+            /*background: blue;*/
+            margin-top: 40px;
+        }
+        #body-left #article-top #article-message #article-user #article-userlogo{
+            width: 35px;
+            height: 35px;
+            outline: hidden;
+        }
+        #body-left #article-top #article-message #article-user span{
+            /*background: red;*/
+            line-height: 50px;
+            position: relative;
+            top: -10px;
+            left: 5px;
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#4a4a4a;
+        }
+        #body-left #article-top #article-message #article-nums{
+            float: right;
+            /*background: paleturquoise;*/
+            margin-top: 35px;
+
+        }
+        #body-left #article-top #article-message #article-nums #article-messagenum li{
+            /*background: red;*/
+            float: left;
+            margin-bottom: 15px;
+            margin-right: 10px;
+            ont-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#9b9b9b;
+        }
+        #body-left #article-top   #article-timenum span{
+            /*background: red;*/
+            position: relative;
+            top: -5px;
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#9b9b9b;
+
+        }
+        /*文章内容样式*/
+
+        #body-left #article-box{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background:#ffffff;
+            box-shadow:0 2px 4px 0 #f2f2f2;
+            border-radius:5px;
+        }
+
+
+        #body-left #article-box #article-neirong{
+            /*background: green;*/
+            margin: 30px;
+        }
+        #body-left #article-box #article-neirong #article-text{
+            /*background: red;*/
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#4a4a4a;
+            padding-bottom: 65px;
+            border-bottom:1px solid #979797;
+        }
+        #body-left #article-box #article-neirong #article-pay{
+            /*background: yellow;*/
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 45px;
+            background:rgba(162,173,175,0.40);
+            border-radius:5px;
+        }
+        #body-left #article-box #article-neirong #article-pay #pay-button{
+            background:#e93f33;
+            border-radius:5px;
+            width:120px;
+            height:45px;
+            margin: 0 auto;
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#ffffff;
+        }
+        #body-left #article-box #article-neirong #article-pay #pay-button img{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 8px;
+
+        }
+        #body-left #article-box #article-neirong #article-pay p{
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#4a4a4a;
+            margin-top: 10px;
+        }
+
+        #body-left #article-box #article-neirong #article-like #button_like span{
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#464e60;
+        }
+        #body-left #article-box #article-neirong #article-like #button_like img{
+            position: relative;
+            top: 5px;
+        }
+        #body-left #article-box #article-neirong #article-like #button_like{
+            float: right;
+            background:#ffffff;
+            border:1px solid #464e60;
+            border-radius:30px;
+            width:109px;
+            height:38px;
+            margin-top: 15px;
+        }
+        /*作者卡片*/
+        #body-left #usercard{
+            background:#ffffff;
+            box-shadow:0 2px 4px 0 #f2f2f2;
+            border-radius:5px;
+            /*width:855px;*/
+            height:100px;
+            margin-top: 15px;
+
+        }
+        #body-left #usercard #card_usermessage{
+            float: left;
+            /*background: yellow;*/
+            width: 145px;
+            height: 50px;
+            margin: 15px;
+            margin-top: 25px;
+        }
+        #body-left #usercard #card_usermessage img{
+            width: 60px;
+            height: 60px;
+            outline: hidden;
+        }
+        #body-left #usercard #card_usermessage span{
+            /*background: red;*/
+            position: relative;
+            top: -20px;
+            margin-left: 5px;
+            font-family:PingFangSC-Regular;
+            font-size:25px;
+            color:#4a4a4a;
+        }
+
+        #body-left #usercard #card_buttonadd{
+            float: left;
+            background:#ffffff;
+            border:1px solid #464e60;
+            border-radius:20px;
+            width:80px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            font-family:PingFangSC-Regular;
+            font-size:15px;
+            color:#4a4a4a;
+            margin-top: 40px;
+        }
+        #body-left #usercard #card_usernum{
+            float: right;
+            background: blue;
+            width: 150px;
+            height: 55px;
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+
+
+
+
+
+        #body-right{
+            background: green;
+            float: right;
+            width: 280px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<!--头部导航栏-->
+<div class="top">
+    <img id="logo" src="image/logo.png" >
+    <ul id="menu">
+        <li>首页</li>
+        <li>个人主页</li>
+        <li>用户中心</li>
+    </ul>
+    <ul id="top_bar">
+        <li>注册</li>
+        <li>|</li>
+        <li onclick="golog()">登录</li>
+    </ul>
+    <div style="clear: both"></div>
+
+</div>
+<!--搜索框-->
+<div id="search" >
+    <div id="search-circle" onmouseover="searchon()" onmouseout="searchout()">
+        <img src="image/icon_search.png">
+        <input name="search-input"  id="search-input" type="text" placeholder="请输入搜索内容">
+    </div>
+</div>
+<!--通知-->
+<div id="message">
+    <div id="message_text">您有1条通知哦~点我来看看吧</div>
+    <img src="image/message_pic2.png">
+</div>
+<div id="body">
+    <div id="body-left">
+        <div id="article-box">
+            <div id="article-top">
+                <div id="article-title">从玩家的角度出发：慈爱的“老母亲”，你为什么会对“蛙儿子”上瘾？</div>
+                <div id="article-message">
+                    <div id="article-user">
+                        <img src="image/userlogo.png" id="article-userlogo">
+                        <span>小雪花</span>
+                    </div>
+                    <div id="article-nums">
+                        <div id="article-messagenum">
+                            <li>
+                                <span>100</span>
+                                <span>人浏览</span>
+                            </li>
+                            <li>
+                                <span>12</span>
+                                <span>人收藏</span>
+                            </li>
+                            <li>
+                                <span>4</span>
+                                <span>人评论</span>
+                            </li>
+                            <div style="clear: both"></div>
+                        </div>
+                        <div id="article-timenum">
+                            <img src="image/articlepage-timeicon.png">
+                            <span>2018-01-01</span>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+
+            </div>
+            <div id="article-neirong">
+                <p id="article-text">
+                    通过上瘾模型，分四步解析了用户是如何对《旅游青蛙》这款游戏上瘾的原因，本文没有讨论这款游戏为什么会火的外部原因，只是从玩家的角度出发，试图通过对人内心需求的解读，来揭示我们为何会被一只小青蛙所左右。通过上瘾模型，分四步解析了用户是如何对《旅游青蛙》这款游戏上瘾的原因，本文没有讨论这款游戏为什么会火的外部原因，只是从玩家的角度出发，试图通过对人内心需求的解读，来揭示我们为何会被一只小青蛙所左右。通过上瘾模型，分四步解析了用户是如何对《旅游青蛙》这款游戏上瘾的原因，本文没有讨论这款游戏为什么会火的外部原因，只是从玩家的角度出发，试图通过对人内心需求的解读，来揭示我们为何会被一只小青蛙所左右。通过上瘾模型，分四步解析了用户是如何对《旅游青蛙》这款游戏上瘾的原因，本文没有讨论这款游戏
+                </p>
+                <div id="article-pay">
+                    <div id="pay-button">
+                        <img src="image/articlepage-payicon.png">
+                        <span>打赏</span>
+                    </div>
+                    <p>打赏是对原创者的最大认可</p>
+                </div>
+                <div id="article-like">
+                    <button id="button_like">
+                        <img src="image/articlepage-likeicon.png">
+                        <span>收藏</span>
+                    </button>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+
+        </div>
+        <div id="usercard">
+            <div id="card_usermessage">
+                <img src="image/userlogo.png">
+                <span>小雪花</span>
+            </div>
+            <div id="card_buttonadd">关注他</div>
+            <div id="card_usernum">num
+                <li>
+                    <div>2pian</div>
+                    <div>作品</div>
+                </li>
+                <img src="image/articlepage-lineI.png">
+                <li>
+                    <div>1,000</div>
+                    <div>总阅读量</div>
+                </li>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div>huifu</div>
+        <div>comment-box</div>
+    </div>
+    <div id="body-right">right
+        <div>
+            pointcard
+        </div>
+        <div>
+            topic
+        </div>
+    </div>
+    <div style="clear: both"></div>
+
+</div>
+</body>
+</html>

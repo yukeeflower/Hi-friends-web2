@@ -1,0 +1,130 @@
+body,ul,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{  padding: 0px;  margin: 0px;  font-family: Arial; }
+li{  list-style: none;  }
+image{border: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+body{
+    background: url("image/login-bodybg.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    overflow: hidden;
+    background-size: cover;
+    /*display: flex;*/
+    /*align-items:center;!*指定垂直居中*!*/
+
+
+}
+#floater{
+    float: left;
+    height: 50%;
+    margin-bottom: -250px;
+}
+#loginbox{
+    clear: both;
+    position: relative;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+    /*background: #FFFFFF;*/
+    /*position: relative;*/
+    /*top: 130px;*/
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    /*background:rgba(228,229,232,0.80);*/
+
+
+}
+#left{
+    background:rgba(254,220,0,0.60);
+    width:50%;
+    height:500px;
+    float: left;
+}
+#left #left-box{
+    /*background: red;*/
+    position: relative;
+    top: 30%;
+}
+#left img{
+    width: 100%;
+}
+#left #login-logo{
+    /*background: red;*/
+    width: 300px;
+    margin: 0 auto;
+
+}
+#left #login-title{
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+#right{
+    background:rgba(228,229,232,0.80);
+    /*width: 50%;*/
+    width: 400px;
+    height: 500px;
+    /*background: red;*/
+    position: absolute;
+    left: 400px;
+
+}
+#right #right-title{
+    clear: both;
+    /*background: red;*/
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
+}
+#right #right-text{
+    /*background: yellow;*/
+    margin-top: 50px;
+    text-align: center;
+}
+#right #login-form p{
+    background:rgba(254,220,0,0.60);
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+}
+#right #login-form input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 45px;
+    width: 250px;
+}
+#right #login-form input::-webkit-input-placeholder{
+    color: #FFFFFF;
+}
+#right #login-form #btn{
+    margin-top: 50px;
+    background:#ffcd00;
+}
+#right  #right-foot{
+    /*background: red;*/
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    text-align: left;
+    font-size: 15px;
+    color: #4A4A4A;
+
+}
+#right #right-foot #foot-addid{
+    /*background: green;*/
+    margin-left: 5px;
+}
+#right #right-foot #foot-pass{
+    /*background: yellow;*/
+    float: right;
+    clear: both;
+    margin-right: 5px;
+}
