@@ -1,0 +1,569 @@
+body,ul,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{  padding: 0px;  margin: 0px;  font-family: Arial; }
+li{  list-style: none;  }
+image{border: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+body{
+    background:#f9fafd;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.02);
+}
+
+/*头部导航栏样式*/
+.top{
+    margin: 0px;
+    padding: 0px;
+    width:auto;
+    height: 120px;
+    background: #fedc00;
+    box-shadow:0 2px 16px 0 #8b572a;
+
+
+}
+#logo{
+    margin-top: 40px;
+    margin-left: 32px;
+    float: left;
+
+
+}
+.top ul li {
+    float: left;
+}
+#menu li{
+    margin-top: 50px;
+    font-size:25px;
+    color:#505152;
+    margin-left: 5%;
+}
+/*头部导航栏鼠标移入动效*/
+#menu li:hover{
+    font-family:PingFangSC-Semibold;
+    color:#505152;
+}
+
+#top_bar{
+    margin-top: 50px;
+    float: right;
+    font-size:25px;
+    color:#505152;
+    margin-right: 20px;
+}
+/*注册登录移入动效*/
+#top_bar li:hover{
+    font-family:PingFangSC-Semibold;
+    color:#505152;
+}
+/*搜索框*/
+#search{
+    /*background: green;*/
+    position: absolute;
+    top: 90px;
+    right: 75px;
+}
+#search-circle{
+    width: 74px;
+    height: 74px;
+    background-color: #e93f33;
+    -webkit-border-radius: 100px;
+    transition: 0.5s;
+}
+/*搜索框移入动效*/
+/*#search-circle:hover{*/
+/*width: 250px;*/
+/*}*/
+#search-circle img{
+    /*background: blue;*/
+    position: relative;
+    top: 17px;
+    left: 17px;
+}
+#search #search-input{
+    display: none;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    position: relative;
+    left: 60px;
+    top: -15px;
+    color: #FFFFFF;
+
+}
+#search-input::-webkit-input-placeholder{
+    color: #FFFFFF;
+}
+
+/*通知*/
+#message{
+    position: absolute;
+    top: 220px;
+    right: 20px;
+    /*background: yellow;*/
+}
+#message #message_text{
+    /*background: blue;*/
+    width: 115px;
+    position: relative;
+    top: 65px;
+    left: 24px;
+}
+
+
+
+
+/*文章内容部分*/
+#body{
+    /*background: blue;*/
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+
+}
+#body-left {
+    /*background: #FFFFFF;*/
+    float: left;
+    width: 900px;
+}
+#body-left #article-box{
+    /*background: red;*/
+    width: 100%;
+}
+#body-left #article-top{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#body-left #article-top #article-title{
+    /*background: red;*/
+    width: 100%;
+    font-family:PingFangSC-Semibold;
+    font-size:25px;
+    color:#4a4a4a;
+
+}
+#body-left #article-top #article-message{
+    /*background: palegoldenrod;*/
+
+
+}
+#body-left #article-top #article-message #article-user{
+    float: left;
+    /*width: 80px;*/
+    height: 50px;
+    /*background: blue;*/
+    margin-top: 40px;
+}
+#body-left #article-top #article-message #article-user #article-userlogo{
+    width: 35px;
+    height: 35px;
+    outline: hidden;
+}
+#body-left #article-top #article-message #article-user span{
+    /*background: red;*/
+    line-height: 50px;
+    position: relative;
+    top: -10px;
+    left: 5px;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+}
+#body-left #article-top #article-message #article-nums{
+    float: right;
+    /*background: paleturquoise;*/
+    margin-top: 35px;
+
+}
+#body-left #article-top #article-message #article-nums #article-messagenum li{
+    /*background: red;*/
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    ont-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#9b9b9b;
+}
+#body-left #article-top   #article-timenum span{
+    /*background: red;*/
+    position: relative;
+    top: -5px;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#9b9b9b;
+
+}
+/*文章内容样式*/
+
+#body-left #article-box{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+}
+
+
+#body-left #article-box #article-neirong{
+    /*background: green;*/
+    margin: 30px;
+}
+#body-left #article-box #article-neirong #article-text{
+    /*background: red;*/
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+    padding-bottom: 65px;
+    border-bottom:1px solid #979797;
+}
+#body-left #article-box #article-neirong #article-pay{
+    /*background: yellow;*/
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 45px;
+    background:rgba(162,173,175,0.40);
+    border-radius:5px;
+}
+#body-left #article-box #article-neirong #article-pay #pay-button{
+    background:#e93f33;
+    border-radius:5px;
+    width:120px;
+    height:45px;
+    margin: 0 auto;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#ffffff;
+}
+#body-left #article-box #article-neirong #article-pay #pay-button img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 8px;
+
+}
+#body-left #article-box #article-neirong #article-pay p{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+    margin-top: 10px;
+}
+
+#body-left #article-box #article-neirong #article-like #button_like span{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#464e60;
+}
+#body-left #article-box #article-neirong #article-like #button_like img{
+    position: relative;
+    top: 5px;
+}
+#body-left #article-box #article-neirong #article-like #button_like{
+    float: right;
+    background:#ffffff;
+    border:1px solid #464e60;
+    border-radius:30px;
+    width:109px;
+    height:38px;
+    margin-top: 15px;
+}
+/*作者卡片*/
+#body-left #usercard{
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+    /*width:855px;*/
+    height:100px;
+    margin-top: 15px;
+
+}
+#body-left #usercard #card_usermessage{
+    float: left;
+    /*background: yellow;*/
+    width: 145px;
+    height: 50px;
+    margin: 15px;
+    margin-top: 25px;
+}
+#body-left #usercard #card_usermessage img{
+    width: 60px;
+    height: 60px;
+    outline: hidden;
+}
+#body-left #usercard #card_usermessage span{
+    /*background: red;*/
+    position: relative;
+    top: -20px;
+    margin-left: 5px;
+    font-family:PingFangSC-Regular;
+    font-size:25px;
+    color:#4a4a4a;
+}
+
+#body-left #usercard #card_buttonadd{
+    float: left;
+    background:#ffffff;
+    border:1px solid #464e60;
+    border-radius:20px;
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+    margin-top: 40px;
+}
+#body-left #usercard #card_usernum{
+    float: right;
+    /*background: blue;*/
+    width: 150px;
+    height: 55px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+#body-left #usercard #card_usernum li{
+    float: left;
+    margin-left: 15px;
+}
+#body-left #usercard #card_usernum .usermessage-top{
+    font-family:PingFangSC-Regular;
+    font-size:20px;
+    color:#4a4a4a;
+}
+#body-left #usercard #card_usernum .usermessage-bottom{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+    text-align:left;
+}
+#body-left #write-box{
+    margin-top: 15px;
+    padding-top: 35px;
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+    /*text-align: center;*/
+}
+#body-left #write-top{
+    /*background: blue;*/
+    margin: 0 auto;
+    /*margin-top: 35px;*/
+    width: 765px;
+    border:1px solid #a2adaf;
+    height:148px;
+}
+#body-left #write-top textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    width: 705px;
+    height: 98px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+#body-left #write-bottom{
+    /*background: yellow;*/
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 765px;
+
+}
+#body-left #write-bottom .icon-face{
+    width: 30px;
+    height: 30px;
+    outline: none;
+}
+#body-left #write-bottom .icon-pic{
+    width: 30px;
+}
+#body-left #write-bottom .btn-huifu{
+    background:#ffffff;
+    border:1px solid #464e60;
+    border-radius:5px;
+    width:118px;
+    height:40px;
+    float: right;
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#464e60;
+    position: relative;
+    top: -8px;
+}
+#body-left #comment-box{
+    margin-top: 30px;
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*width: 765px;*/
+}
+#body-left #comment-box #conmentbox-title{
+    font-family:PingFangSC-Regular;
+    font-size:20px;
+    color:#000000;
+    margin-bottom: 20px;
+}
+#body-left #comment-box .commment-cell{
+    /*background: blue;*/
+    border-bottom:1px solid #979797;
+    margin-top: 15px;
+
+}
+#body-left #comment-box .comment-userpic{
+    /*background: red;*/
+    float: left;
+}
+#body-left #comment-box .comment-userpic img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+#body-left #comment-box .comment-text{
+    /*background: yellow;*/
+    margin-left: 65px;
+}
+#body-left #comment-box .comment-text .text-username{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#0f2c6c;
+    /*background: green;*/
+    margin-bottom: 10px;
+}
+#body-left #comment-box .comment-text .text p{
+    /*background: paleturquoise;*/
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+
+}
+#body-left #comment-box .comment-text .text-foot{
+    /*background: palevioletred;*/
+    margin-top: 20px;
+}
+#body-left #comment-box .comment-text .text-foot .text-time{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#9b9b9b;
+}
+#body-left #comment-box .comment-text .text-foot .foot-huifubox{
+    /*background: red;*/
+    float: right;
+}
+#body-left #comment-box .comment-text .text-foot .foot-huifubox span{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#9b9b9b;
+    position: relative;
+    top: -8px;
+}
+
+#body-right{
+    /*background: green;*/
+    float: right;
+    position: relative;
+    left: 20px;
+    width: 300px;
+}
+/*标签卡片*/
+#body-right #pointcard{
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+    width:300px;
+    height:130px;
+    padding-top: 15px;
+}
+#body-right #pointcard #pointcard-pic{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 5px;
+    margin-right: 5px;
+}
+#body-right #pointcard #card-right span {
+    font-family:PingFangSC-Medium;
+    font-size:20px;
+    color:#4a4a4a;
+}
+#body-right #pointcard #card-right #point-message{
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#9b9b9b;
+    margin-top: 5px;
+}
+#body-right #pointcard #card-right #btn-addpoint{
+    width: 100px;
+    height: 30px;
+    background:#e93f33;
+    border: none;
+    border-radius:5px;
+    margin-top: 20px;
+
+}
+#body-right #pointcard #card-right #btn-addpoint #btn-addpoint-icon{
+    float: left;
+    margin: 5px;
+}
+#body-right #pointcard #card-right #btn-addpoint #btn-addpoint-line{
+    position: relative;
+    left: -10px;
+
+}
+#body-right #pointcard #card-right #btn-addpoint span{
+    font-size: 15px;
+    color: #FFFFFF;
+    position: relative;
+    top: -6px;
+}
+
+/*热门话题*/
+#body-right #topic-box{
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+    height:506px;
+    margin-top: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#body-right #topic-box #hot-title{
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+
+}
+#body-right #topic-box #hot-title span{
+    font-family:PingFangSC-Medium;
+    font-size:20px;
+    color:#4a4a4a;
+}
+#body-right #topics{
+    /*background: yellow;*/
+}
+#body-right #topics .topic-cell{
+    /*background: blanchedalmond;*/
+    height: 80px;
+    padding-top: 10px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+#body-right #topics .topic-cell img{
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+#body-right #topics .topic-cell .cell-question {
+    font-family:PingFangSC-Regular;
+    font-size:15px;
+    color:#4a4a4a;
+}
+#body-right #topics .topic-cell .cell-foot{
+    font-family:PingFangSC-Regular;
+    font-size:10px;
+    color:#9b9b9b;
+    position: relative;
+    bottom: -5px;
+}

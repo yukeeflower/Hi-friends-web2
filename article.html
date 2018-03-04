@@ -3,345 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>文章详情</title>
-    <style>
-        body,ul,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{  padding: 0px;  margin: 0px;  font-family: Arial; }
-        li{  list-style: none;  }
-        image{border: none;}
-        a{text-decoration: none;}
-        a:hover{text-decoration: none;}
-        body{
-            background:#f9fafd;
-            box-shadow:0 2px 4px 0 rgba(0,0,0,0.02);
-        }
-
-        /*头部导航栏样式*/
-        .top{
-            margin: 0px;
-            padding: 0px;
-            width:auto;
-            height: 120px;
-            background: #fedc00;
-            box-shadow:0 2px 16px 0 #8b572a;
-
-
-        }
-        #logo{
-            margin-top: 40px;
-            margin-left: 32px;
-            float: left;
-
-
-        }
-        .top ul li {
-            float: left;
-        }
-        #menu li{
-            margin-top: 50px;
-            font-size:25px;
-            color:#505152;
-            margin-left: 5%;
-        }
-        /*头部导航栏鼠标移入动效*/
-        #menu li:hover{
-            font-family:PingFangSC-Semibold;
-            color:#505152;
-        }
-
-        #top_bar{
-            margin-top: 50px;
-            float: right;
-            font-size:25px;
-            color:#505152;
-            margin-right: 20px;
-        }
-        /*注册登录移入动效*/
-        #top_bar li:hover{
-            font-family:PingFangSC-Semibold;
-            color:#505152;
-        }
-        /*搜索框*/
-        #search{
-            /*background: green;*/
-            position: absolute;
-            top: 90px;
-            right: 75px;
-        }
-        #search-circle{
-            width: 74px;
-            height: 74px;
-            background-color: #e93f33;
-            -webkit-border-radius: 100px;
-            transition: 0.5s;
-        }
-        /*搜索框移入动效*/
-        /*#search-circle:hover{*/
-        /*width: 250px;*/
-        /*}*/
-        #search-circle img{
-            /*background: blue;*/
-            position: relative;
-            top: 17px;
-            left: 17px;
-        }
-        #search #search-input{
-            display: none;
-            border: none;
-            background: none;
-            outline: none;
-            font-size: 20px;
-            position: relative;
-            left: 60px;
-            top: -15px;
-            color: #FFFFFF;
-
-        }
-        #search-input::-webkit-input-placeholder{
-            color: #FFFFFF;
-        }
-
-        /*通知*/
-        #message{
-            position: absolute;
-            top: 220px;
-            right: 20px;
-            /*background: yellow;*/
-        }
-        #message #message_text{
-            /*background: blue;*/
-            width: 115px;
-            position: relative;
-            top: 65px;
-            left: 24px;
-        }
-
-
-
-
-        /*文章内容部分*/
-        #body{
-            /*background: blue;*/
-            width: 1200px;
-            margin: 0 auto;
-            margin-top: 60px;
-
-
-        }
-        #body-left {
-            /*background: #FFFFFF;*/
-            float: left;
-            width: 900px;
-        }
-        #body-left #article-box{
-            /*background: red;*/
-            width: 100%;
-        }
-        #body-left #article-top{
-            margin-top: 20px;
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-        #body-left #article-top #article-title{
-            /*background: red;*/
-            width: 100%;
-            font-family:PingFangSC-Semibold;
-            font-size:25px;
-            color:#4a4a4a;
-
-        }
-        #body-left #article-top #article-message{
-            /*background: palegoldenrod;*/
-
-
-        }
-        #body-left #article-top #article-message #article-user{
-            float: left;
-            /*width: 80px;*/
-            height: 50px;
-            /*background: blue;*/
-            margin-top: 40px;
-        }
-        #body-left #article-top #article-message #article-user #article-userlogo{
-            width: 35px;
-            height: 35px;
-            outline: hidden;
-        }
-        #body-left #article-top #article-message #article-user span{
-            /*background: red;*/
-            line-height: 50px;
-            position: relative;
-            top: -10px;
-            left: 5px;
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#4a4a4a;
-        }
-        #body-left #article-top #article-message #article-nums{
-            float: right;
-            /*background: paleturquoise;*/
-            margin-top: 35px;
-
-        }
-        #body-left #article-top #article-message #article-nums #article-messagenum li{
-            /*background: red;*/
-            float: left;
-            margin-bottom: 15px;
-            margin-right: 10px;
-            ont-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#9b9b9b;
-        }
-        #body-left #article-top   #article-timenum span{
-            /*background: red;*/
-            position: relative;
-            top: -5px;
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#9b9b9b;
-
-        }
-        /*文章内容样式*/
-
-        #body-left #article-box{
-            padding-top: 15px;
-            padding-bottom: 15px;
-            background:#ffffff;
-            box-shadow:0 2px 4px 0 #f2f2f2;
-            border-radius:5px;
-        }
-
-
-        #body-left #article-box #article-neirong{
-            /*background: green;*/
-            margin: 30px;
-        }
-        #body-left #article-box #article-neirong #article-text{
-            /*background: red;*/
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#4a4a4a;
-            padding-bottom: 65px;
-            border-bottom:1px solid #979797;
-        }
-        #body-left #article-box #article-neirong #article-pay{
-            /*background: yellow;*/
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            margin-top: 45px;
-            background:rgba(162,173,175,0.40);
-            border-radius:5px;
-        }
-        #body-left #article-box #article-neirong #article-pay #pay-button{
-            background:#e93f33;
-            border-radius:5px;
-            width:120px;
-            height:45px;
-            margin: 0 auto;
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#ffffff;
-        }
-        #body-left #article-box #article-neirong #article-pay #pay-button img{
-            width: 30px;
-            height: 30px;
-            position: relative;
-            top: 8px;
-
-        }
-        #body-left #article-box #article-neirong #article-pay p{
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#4a4a4a;
-            margin-top: 10px;
-        }
-
-        #body-left #article-box #article-neirong #article-like #button_like span{
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#464e60;
-        }
-        #body-left #article-box #article-neirong #article-like #button_like img{
-            position: relative;
-            top: 5px;
-        }
-        #body-left #article-box #article-neirong #article-like #button_like{
-            float: right;
-            background:#ffffff;
-            border:1px solid #464e60;
-            border-radius:30px;
-            width:109px;
-            height:38px;
-            margin-top: 15px;
-        }
-        /*作者卡片*/
-        #body-left #usercard{
-            background:#ffffff;
-            box-shadow:0 2px 4px 0 #f2f2f2;
-            border-radius:5px;
-            /*width:855px;*/
-            height:100px;
-            margin-top: 15px;
-
-        }
-        #body-left #usercard #card_usermessage{
-            float: left;
-            /*background: yellow;*/
-            width: 145px;
-            height: 50px;
-            margin: 15px;
-            margin-top: 25px;
-        }
-        #body-left #usercard #card_usermessage img{
-            width: 60px;
-            height: 60px;
-            outline: hidden;
-        }
-        #body-left #usercard #card_usermessage span{
-            /*background: red;*/
-            position: relative;
-            top: -20px;
-            margin-left: 5px;
-            font-family:PingFangSC-Regular;
-            font-size:25px;
-            color:#4a4a4a;
-        }
-
-        #body-left #usercard #card_buttonadd{
-            float: left;
-            background:#ffffff;
-            border:1px solid #464e60;
-            border-radius:20px;
-            width:80px;
-            height:30px;
-            line-height: 30px;
-            text-align: center;
-            font-family:PingFangSC-Regular;
-            font-size:15px;
-            color:#4a4a4a;
-            margin-top: 40px;
-        }
-        #body-left #usercard #card_usernum{
-            float: right;
-            background: blue;
-            width: 150px;
-            height: 55px;
-            margin-top: 20px;
-            margin-right: 30px;
-        }
-
-
-
-
-
-        #body-right{
-            background: green;
-            float: right;
-            width: 280px;
-
-        }
-
-
-    </style>
+    <link href="article.css" rel="stylesheet">
 </head>
 <body>
 <!--头部导航栏-->
@@ -434,28 +96,160 @@
                 <span>小雪花</span>
             </div>
             <div id="card_buttonadd">关注他</div>
-            <div id="card_usernum">num
+            <div id="card_usernum">
                 <li>
-                    <div>2pian</div>
-                    <div>作品</div>
+                    <div class="usermessage-top">2篇</div>
+                    <div class="usermessage-bottom">作品</div>
                 </li>
-                <img src="image/articlepage-lineI.png">
+
                 <li>
-                    <div>1,000</div>
-                    <div>总阅读量</div>
+                    <img src="image/articlepage-lineI.png">
+                </li>
+                <li>
+                    <div class="usermessage-top">1,000</div>
+                    <div class="usermessage-bottom">总阅读量</div>
                 </li>
             </div>
             <div style="clear: both"></div>
         </div>
-        <div>huifu</div>
-        <div>comment-box</div>
-    </div>
-    <div id="body-right">right
-        <div>
-            pointcard
+        <div id="write-box">
+            <div id="write-top">
+                <textarea placeholder="我也说一句…"></textarea>
+            </div>
+            <div id="write-bottom">
+                <img src="image/articlepage-faceicon.png" class="icon-face">
+                <img src="image/articlepage-picicon.png" class="icon-pic">
+                <button class="btn-huifu">回复</button>
+            </div>
+            <div style="clear: both"></div>
         </div>
-        <div>
-            topic
+        <div id="comment-box">
+            <div id="conmentbox-title">
+                <img src="image/rectangle-bg.png">
+                <span>评论</span>
+            </div>
+            <div class="commment-cell">
+                <div class="comment-userpic">
+                    <img src="image/article-userpic2.png">
+                </div>
+                <div class="comment-text">
+                    <div class="text-username">XO小喵</div>
+                    <div class="text">
+                        <p>都说走出校门后，遇到的第一个领导很重要，他就像领路人一样，让你从一个学生转变为一个社会人。
+                            先入为主的思想很重要，你教会他什么，包括为人品质、生存之道等等，在以后的生活里，他记忆这些要比后续接触到的更加深刻。
+                            真羡慕他能遇到您这样一个伯乐，也替您遇到一小知己而高兴！
+                            新的一年，我要努力了，希望遇到一个与您一样的人
+                        </p>
+                    </div>
+                    <div class="text-foot">
+                        <span class="text-time">2018/03/01</span>
+                        <span class="foot-huifubox">
+                            <img class="text-iconhuifu" src="image/icon-pinglun.png">
+                            <span>回复</span>
+                        </span>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+
+
+            </div>
+            <div class="commment-cell">
+                <div class="comment-userpic">
+                    <img src="image/article-userpic3.png">
+                </div>
+                <div class="comment-text">
+                    <div class="text-username">YPJ</div>
+                    <div class="text">
+                        <p>感同身受，去年毕业，实习到现在有4个leader，人都特别好，也让我学会人多东西。我知道有一个好leader带着成长是多么幸福的一件事儿，感谢这一路上的所有人。
+                        </p>
+                    </div>
+                    <div class="text-foot">
+                        <span class="text-time">2018/02/01</span>
+                        <span class="foot-huifubox">
+                            <img class="text-iconhuifu" src="image/icon-pinglun.png">
+                            <span>回复</span>
+                        </span>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="body-right">
+        <div id="pointcard">
+            <img id="pointcard-pic" src="image/point-pic1.png">
+            <div id="card-right">
+                <li>
+                    <span>产品运行</span>
+                </li>
+                <li id="point-message">1，000话题  23.1万人关注</li>
+                <button id="btn-addpoint" >
+                    <img src="image/icon-add.png" id="btn-addpoint-icon">
+                    <img src="image/addbtn-line1.png" id="btn-addpoint-line">
+                    <span>关注</span>
+                </button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div id="topic-box">
+            <div id="hot-title">
+                <img src="image/icon-hot.png">
+                <span>热门话题</span>
+            </div>
+            <ul id="topics">
+                <li class="topic-cell">
+                        <img src="image/Triangle-icon.png" class="cell-topic-image">
+                        <p class="cell-question">
+                            微信用户量这么大，跳一跳为什么不加入广告？
+                        </p>
+                        <div class="cell-foot">
+                            1，000人参与·100人回答
+                        </div>
+                        <div style="clear:both;"></div>
+                </li>
+                <li class="topic-cell">
+                    <img src="image/Triangle-icon.png" class="cell-topic-image">
+                    <p class="cell-question">
+                        微信用户量这么大，跳一跳为什么不加入广告？
+                    </p>
+                    <div class="cell-foot">
+                        1，000人参与·100人回答
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+                <li class="topic-cell">
+                    <img src="image/Triangle-icon.png" class="cell-topic-image">
+                    <p class="cell-question">
+                        微信用户量这么大，跳一跳为什么不加入广告？
+                    </p>
+                    <div class="cell-foot">
+                        1，000人参与·100人回答
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+                <li class="topic-cell">
+                    <img src="image/Triangle-icon.png" class="cell-topic-image">
+                    <p class="cell-question">
+                        微信用户量这么大，跳一跳为什么不加入广告？
+                    </p>
+                    <div class="cell-foot">
+                        1，000人参与·100人回答
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+                <li class="topic-cell">
+                    <img src="image/Triangle-icon.png" class="cell-topic-image">
+                    <p class="cell-question">
+                        微信用户量这么大，跳一跳为什么不加入广告？
+                    </p>
+                    <div class="cell-foot">
+                        1，000人参与·100人回答
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+            </ul>
         </div>
     </div>
     <div style="clear: both"></div>
