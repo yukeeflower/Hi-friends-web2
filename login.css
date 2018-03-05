@@ -83,6 +83,7 @@ body{
     margin-top: 50px;
     text-align: center;
 }
+
 #right #login-form p{
     background:rgba(254,220,0,0.60);
     margin: 0 auto;
@@ -91,6 +92,13 @@ body{
     height: 45px;
     border: none;
     border-radius: 30px;
+}
+#right  #right-text #erro{
+    visibility: hidden;
+    position: relative;
+    top: 15px;
+    right: -100px;
+    color: red;
 }
 #right #login-form input {
     border: none;

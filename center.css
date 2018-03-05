@@ -1,0 +1,263 @@
+body,ul,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{  padding: 0px;  margin: 0px;  font-family: Arial; }
+li{  list-style: none;  }
+image{border: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+body{
+    background:#f9fafd;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.02);
+}
+
+/*头部导航栏样式*/
+.top{
+    margin: 0px;
+    padding: 0px;
+    width:auto;
+    height:250px;
+    background: #fedc00;
+    box-shadow:0 2px 16px 0 #8b572a;
+
+
+}
+#logo{
+    margin-top: 40px;
+    margin-left: 32px;
+    float: left;
+
+
+}
+.top ul li {
+    float: left;
+}
+#menu li{
+    margin-top: 50px;
+    font-size:25px;
+    color:#505152;
+    margin-left: 5%;
+}
+/*头部导航栏鼠标移入动效*/
+#menu li:hover{
+    font-family:PingFangSC-Semibold;
+    color:#505152;
+}
+
+#top_bar{
+    margin-top: 50px;
+    float: right;
+    font-size:25px;
+    color:#505152;
+    margin-right: 20px;
+}
+/*注册登录移入动效*/
+#top_bar li:hover{
+    font-family:PingFangSC-Semibold;
+    color:#505152;
+}
+/*用户头像信息*/
+.top #usermessage{
+    /*background: green;*/
+}
+.top #usermessage #top-userleft{
+    float: left;
+}
+.top #usermessage #top-userleft #top-userbg{
+    width: 120px;
+    position: relative;
+    left: 100px;
+    top: 14px;
+}
+.top #usermessage #top-userleft #top-userpic{
+    position: relative;
+    top: -20px;
+    left: 215px;
+    width: 100px;
+    height: 100px;
+    outline: hidden;
+    border-radius: 100px;
+}
+.top #usermessage #top-userright{
+    /*background: green;*/
+    position: relative;
+    left: 120px;
+    top: 50px;
+}
+.top #usermessage #top-username{
+    font-family:PingFangSC-Semibold;
+    font-size:35px;
+    color:#ffffff;
+    margin-left: 250px;
+    /*background: green;*/
+}
+.top #usermessage #top-tab li {
+    float: left;
+    /*background: red;*/
+    font-family:PingFangSC-Regular;
+    font-size:30px;
+    color:#ffffff;
+    margin-right: 90px;
+    margin-top: 20px;
+}
+/*移入动效*/
+.top #usermessage #top-tab li:hover{
+    font-family:PingFangSC-Semibold;
+
+
+}
+.top #usermessage #top-tab #toptab1{
+    position: relative;
+    left: 24px;
+}
+
+
+
+
+
+/*搜索框*/
+#search{
+    /*background: green;*/
+    position: absolute;
+    top: 220px;
+    right: 75px;
+}
+#search-circle{
+    width: 74px;
+    height: 74px;
+    background-color: #e93f33;
+    -webkit-border-radius: 100px;
+    transition: 0.5s;
+}
+/*搜索框移入动效*/
+/*#search-circle:hover{*/
+/*width: 250px;*/
+/*}*/
+#search-circle img{
+    /*background: blue;*/
+    position: relative;
+    top: 17px;
+    left: 17px;
+}
+#search #search-input{
+    display: none;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    position: relative;
+    left: 60px;
+    top: -15px;
+    color: #FFFFFF;
+
+}
+#search-input::-webkit-input-placeholder{
+    color: #FFFFFF;
+}
+
+/*通知*/
+#message{
+    position: absolute;
+    top: 250px;
+    right: 20px;
+    /*background: blue;*/
+}
+#message #message_text{
+    /*background: blue;*/
+    width: 115px;
+    position: relative;
+    top: 65px;
+    left: 24px;
+}
+
+/*设置信息卡片*/
+#body-box{
+    /*background: red;*/
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    width:1000px;
+    /*height:650px;*/
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 25px;
+}
+#body-box #jiben-box{
+    /*background: yellow;*/
+}
+#body-box  img{
+    margin-right: 10px;
+}
+#body-box  .top-blueline{
+    height: 25px;
+    position: relative;
+    top: 5px;
+}
+#body-box  .top-line{
+    position: relative;
+    top: -5px;
+}
+#body-box span{
+    font-family:PingFangSC-Regular;
+    font-size:25px;
+    color:#4a4a4a;
+    margin-right: 10px;
+}
+#body-box .box-neirong{
+    /*background: green;*/
+    margin-top: 30px;
+    text-align: center;
+}
+#body-box  .box-neirong  li label{
+    /*background: red;*/
+    font-family:PingFangSC-Semibold;
+    font-size:20px;
+    color:#4a4a4a;
+    margin-right: 60px;
+}
+#body-box .box-neirong li input{
+    background:#ffffff;
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+    width:340px;
+    height:50px;
+    margin-top: 20px;
+    font-family:PingFangSC-Semibold;
+    font-size:18px;
+    color:#4a4a4a;
+}
+#body-box  .box-neirong li button{
+    background:#4990e2;
+    border-radius:5px;
+    width:140px;
+    height:50px;
+    border: none;
+    color: #FFFFFF;
+    margin-top: 85px;
+    margin-left: 105px;
+    margin-bottom: 20px;
+}
+#body-box  .box-neirong .btn-clear{
+    background:#9b9b9b;
+}
+#body-box .box-neirong p{
+    font-family:PingFangSC-Semibold;
+    font-size:20px;
+    color:#4a4a4a;
+    margin-right: 60px;
+    position: relative;
+    left: -180px;
+}
+#body-box #body-userpic{
+    position: relative;
+    top: -50px;
+    left: 18px;
+    width: 140px;
+    height: 140px;
+    border-radius: 140px;
+    /*left: 150px;*/
+}
+#body-box #body-userbd{
+    position: relative;
+    /*top: 150px;*/
+    left: -150px;
+}
+

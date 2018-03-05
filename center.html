@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <script type="text/javascript" src="center.js"></script>
+    <link href="center.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+<!--头部导航栏-->
+<div class="top">
+    <img id="logo" src="image/logo.png" >
+    <ul id="menu">
+        <li>首页</li>
+        <li>个人主页</li>
+        <li>用户中心</li>
+    </ul>
+    <ul id="top_bar">
+        <li>注册</li>
+        <li>|</li>
+        <li onclick="golog()">登录</li>
+    </ul>
+    <div style="clear: both"></div>
+    <!--头部导航栏用户信息-->
+    <div id="usermessage">
+        <div id="top-userleft" >
+            <img src="image/article-userpic2.png" id="top-userpic">
+            <img src="image/center-userbg.png" id="top-userbg">
+        </div>
+        <div id="top-userright">
+            <div id="top-username"><span>小雪花</span></div>
+            <div id="top-tab">
+                <li id="toptab1">个人信息设置</li>
+                <li id="toptab2">我的打赏</li>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+
+    </div>
+
+
+</div>
+<!--搜索框-->
+<div id="search" >
+    <div id="search-circle" onmouseover="searchon()" onmouseout="searchout()">
+        <img src="image/icon_search.png">
+        <input name="search-input"  id="search-input" type="text" placeholder="请输入搜索内容">
+    </div>
+
+</div>
+<!--通知-->
+<div id="message">
+    <div id="message_text">您有1条通知哦~点我来看看吧</div>
+    <img src="image/message_pic2.png">
+</div>
+<div id="body-box">
+    <div id="jiben-box">
+        <div class="box-top">
+            <img src="image/line-blue.png" class="top-blueline">
+            <span>修改基本信息</span>
+            <img src="image/line.png" class="top-line">
+        </div>
+        <div class="box-neirong">
+            <form>
+                <li><label>昵称</label>
+                    <input name="username" id="username" value="小雪花" type="text">
+                </li>
+                <li>
+                    <label>邮箱</label>
+                    <input name="usermail" id="usermail" value="792378316@qq.com" type="email">
+                </li>
+               <li>
+                   <button class="btn-save">保存</button>
+                   <button class="btn-clear">取消</button>
+               </li>
+            </form>
+
+        </div>
+    </div>
+    <div id="pass-box">
+        <div class="box-top">
+            <img src="image/line-blue.png" class="top-blueline">
+            <span>修改密码</span>
+            <img src="image/line.png" class="top-line">
+        </div>
+        <div class="box-neirong">
+            <form>
+                <li><label>原密码</label>
+                    <input name="userpassold" id="userpass-old"  type="password">
+                </li>
+                <li>
+                    <label>新密码</label>
+                    <input name="userpassnew" id="userpassnew" type="password">
+                </li>
+                <li>
+                    <lable style="font-family:PingFangSC-Semibold; font-size:20px;color:#4a4a4a; margin-right: 60px;">确认密码</lable>
+                    <input name="userpasssure" id="userpasssure" type="password" style="position: relative;left: -8px;">
+                </li>
+                <li>
+                    <button class="btn-save">保存</button>
+                    <button class="btn-clear">取消</button>
+                </li>
+            </form>
+        </div>
+    </div>
+    <div id="userpic-box">
+        <div class="box-top">
+            <img src="image/line-blue.png" class="top-blueline">
+            <span>修改头像</span>
+            <img src="image/line.png" class="top-line">
+        </div>
+        <div class="box-neirong">
+            <form>
+                <li>
+                    <p>头像</p>
+                    <img src="image/article-userpic2.png" id="body-userpic">
+                    <img src="image/center-userbg.png" id="body-userbd">
+                </li>
+                <li>
+                    <button class="btn-save">保存</button>
+                    <button class="btn-clear">取消</button>
+                </li>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
