@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <script src="myHome.js" type="text/javascript"></script>
+    <link href="myHome.css" rel="stylesheet">
+</head>
+<body>
+<!--头部导航栏-->
+<div class="top">
+    <img id="logo" src="image/logo.png" >
+    <ul id="menu">
+        <li>首页</li>
+        <li>个人主页</li>
+        <li>用户中心</li>
+    </ul>
+    <ul id="top_bar">
+        <li>注册</li>
+        <li>|</li>
+        <li onclick="golog()">登录</li>
+    </ul>
+    <div style="clear: both"></div>
+    <!--头部导航栏用户信息-->
+    <div id="usermessage">
+        <div id="top-userleft" >
+            <img src="image/article-userpic2.png" id="top-userpic">
+            <img src="image/center-userbg.png" id="top-userbg">
+        </div>
+        <div id="top-userright">
+            <div id="top-username"><span>小雪花</span></div>
+            <div id="top-tab">
+                <li id="toptab1">我的文章</li>
+                <li id="toptab2">我的收藏</li>
+                <li id="toptab3">我的关注</li>
+
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+
+    </div>
+
+
+</div>
+<!--搜索框-->
+<div id="top-icons">
+    <div id="search" >
+        <div id="search-circle" onmouseover="searchon()" onmouseout="searchout()">
+            <img src="image/icon_search.png">
+            <input name="search-input"  id="search-input" type="text" placeholder="请输入搜索内容">
+        </div>
+    </div>
+    <!--写文章-->
+    <div id="write">
+        <div id="write-circle">
+            <img src="image/icon-write.png">
+        </div>
+    </div>
+    <!--排序-->
+    <div id="paixu">
+        <div id="paixu-sel">
+            <li id="paixu-time">时间</li>
+            <li id="paixu-hot">热度</li>
+        </div>
+        <div id="paixu-circle">
+            <img src="image/icon-paixu.png">
+        </div>
+
+
+    </div>
+</div>
+
+<!--通知-->
+<div id="message">
+    <div id="message_text">您有1条通知哦~点我来看看吧</div>
+    <img src="image/message_pic2.png">
+
+</div>
+<!--内容-->
+<div id="body">
+    <div id="pointlist-body" >
+        <!--趣点列表-->
+        <ul id="left_menu" >
+            <li id="menu_title">
+                <span>我的趣点</span>
+                <img src="image/icon_down.png">
+            </li>
+            <li class="menu-point" onclick="">全部趣点</li>
+            <li class="menu-point" onclick="">游戏天地</li>
+            <li class="menu-point">产品运用</li>
+            <li class="menu-point">人工智能</li>
+            <li class="menu-point">编程语言</li>
+            <li class="menu-point">影视趣闻</li>
+            <li class="menu-point">时事热点</li>
+        </ul>
+    </div>
+    <div id="point-text">
+        <div class="content">
+            <div class="content-cell">
+                <div class="cell-layer" >
+                    <div>产品运营</div>
+                </div>
+                <div class="cell-bd" >
+                    <div class="cell-left">
+                        <div class="cell-title">从玩家的角度出发：慈爱的“老母亲”，你为什么会对“蛙儿子”上瘾？</div>
+                        <div class="cell-text">
+                            通过上瘾模型，分四步解析了用户是如何对《旅游青蛙》这款游戏上瘾的原因，本文没有讨论这款游戏为什么会火的外部原因，只是从玩家的角度出发，试图通过对人内心需求的解读，来揭示我们为何会被一只小青蛙所左右。
+                        </div>
+                        <div class="cell-foot">
+                            <div class="cell-user">
+                                <img class="user-logo" src="image/userlogo.png">
+                                <span class="user-name">小雪花</span>
+                            </div>
+                            <div class="cell-time">2018-01-01</div>
+                        </div>
+                    </div>
+                    <div class="newlist">
+                        <ul>
+                            <li>100人浏览</li>
+                            <li>12人收藏</li>
+                            <li>4人评论</li>
+
+                        </ul>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="content-cell">
+                    <div class="cell-layer" >
+                        <div>产品运营</div>
+                    </div>
+                    <div class="cell-bd" >
+                        <div class="cell-left">
+                            <div class="cell-title">从玩家的角度出发：慈爱的“老母亲”，你为什么会对“蛙儿子”上瘾？</div>
+                            <div class="cell-text">
+                                通过上瘾模型，分四步解析了用户是如何对《旅游青蛙》这款游戏上瘾的原因，本文没有讨论这款游戏为什么会火的外部原因，只是从玩家的角度出发，试图通过对人内心需求的解读，来揭示我们为何会被一只小青蛙所左右。
+                            </div>
+                            <div class="cell-foot">
+                                <div class="cell-user">
+                                    <img class="user-logo" src="image/userlogo.png">
+                                    <span class="user-name">小雪花</span>
+                                </div>
+                                <div class="cell-time">2018-01-01</div>
+                            </div>
+                        </div>
+                        <div class="newlist">
+                            <ul>
+                                <li>100人浏览</li>
+                                <li>12人收藏</li>
+                                <li>4人评论</li>
+
+                            </ul>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+</body>
+</html>

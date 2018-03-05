@@ -1,0 +1,226 @@
+body,ul,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,select{  padding: 0px;  margin: 0px;  font-family: Arial; }
+li{  list-style: none;  }
+image{border: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+body{
+    background:#f9fafd;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.02);
+}
+
+/*头部导航栏样式*/
+.top{
+    margin: 0px;
+    padding: 0px;
+    width:auto;
+    height: 120px;
+    background: #fedc00;
+    box-shadow:0 2px 16px 0 #8b572a;
+
+
+}
+#logo{
+    margin-top: 40px;
+    margin-left: 32px;
+    float: left;
+
+
+}
+.top ul li {
+    float: left;
+}
+#menu li{
+    margin-top: 50px;
+    font-size:25px;
+    color:#505152;
+    margin-left: 5%;
+}
+/*头部导航栏鼠标移入动效*/
+#menu li:hover{
+    font-family:PingFangSC-Semibold;
+    color:#505152;
+}
+
+#top_bar{
+    margin-top: 50px;
+    float: right;
+    font-size:25px;
+    color:#505152;
+    margin-right: 20px;
+}
+/*注册登录移入动效*/
+#top_bar li:hover{
+    font-family:PingFangSC-Semibold;
+    color:#505152;
+}
+/*搜索框*/
+#search{
+    /*background: green;*/
+    position: absolute;
+    top: 90px;
+    right: 75px;
+}
+#search-circle{
+    width: 74px;
+    height: 74px;
+    background-color: #e93f33;
+    -webkit-border-radius: 100px;
+    transition: 0.5s;
+}
+/*搜索框移入动效*/
+/*#search-circle:hover{*/
+/*width: 250px;*/
+/*}*/
+#search-circle img{
+    /*background: blue;*/
+    position: relative;
+    top: 17px;
+    left: 17px;
+}
+#search #search-input{
+    display: none;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    position: relative;
+    left: 60px;
+    top: -15px;
+    color: #FFFFFF;
+
+}
+#search-input::-webkit-input-placeholder{
+    color: #FFFFFF;
+}
+
+/*通知*/
+#message{
+    position: absolute;
+    top: 220px;
+    right: 20px;
+    /*background: blue;*/
+}
+#message #message_text{
+    /*background: blue;*/
+    width: 115px;
+    position: relative;
+    top: 65px;
+    left: 24px;
+}
+
+
+#center{
+    margin-top: 100px;
+    margin-left: 80px;
+}
+/*消息导航栏*/
+#message-list{
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    width:335px;
+    height:420px;
+    float: left;
+    border-radius: 5px;
+}
+#message-list li{
+    width: 100%;
+    height: 70px;
+    /*background: bisque;*/
+    text-align: center;
+    line-height: 70px;
+    font-family:PingFangSC-Regular;
+    font-size:20px;
+    color:#4a4a4a
+    /*margin-top: 5px ;*/
+}
+#message-list li:hover{
+    background: #e0e0e0;
+    font-family:PingFangSC-Semibold;
+}
+#message-list li .message-box .num{
+    position: relative;
+    left: -20px;
+    top: -4px;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+/*消息详情*/
+#message-center{
+    background:#ffffff;
+    box-shadow:0 2px 4px 0 #f2f2f2;
+    border-radius:5px;
+    width:800px;
+    margin-left: 400px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
+#message-center #message-top img{
+    height: 25px;
+}
+#message-center #message-top span{
+    font-family:PingFangSC-Regular;
+    font-size:25px;
+    color:#4a4a4a;
+    margin-left: 10px;
+}
+#message-center #message-top div{
+    border-bottom:1px solid #e0e0e0;
+    width:100%;
+}
+#message-center #message-box .message-cell {
+    /*background: yellow;*/
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom:1px solid #e0e0e0;
+}
+#message-center #message-box .message-cell .userlogo {
+    /*background: red;*/
+    float: left;
+    width: 60px;
+    height: 60px;
+    outline: none;
+}
+#message-center #message-box .message-cell .userlogo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+}
+
+#message-center #message-box .message-cell .usermessagebox{
+    /*background: green;*/
+    margin-left: 70px;
+}
+#message-center #message-box .message-cell .username{
+    font-family:PingFangSC-Semibold;
+    font-size:20px;
+    color:#464e60;
+    margin-bottom: 5px;
+}
+#message-center #message-box .message-cell .messagetime{
+    font-family:PingFangSC-Semibold;
+    font-size:15px;
+    color:#9b9b9b;
+}
+#message-center #message-box .message-cell .messagetext{
+    /*background: gainsboro;*/
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#message-center #message-box .message-cell .father-messagetext{
+    background:#f2f2f2;
+    width: 700px;
+    height: 40px;
+    line-height: 40px;
+    font-family:PingFangSC-Semibold;
+    font-size:15px;
+    color:#9b9b9b;
+    padding: 10px;
+}
+#message-center #message-box .message-cell .father-messagetext .father-title{
+    font-family:PingFangSC-Semibold;
+    font-size:15px;
+    color:#464e60;
+}
