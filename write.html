@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写文章的页面</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 可选的Bootstrap主题文件（一般不使用） -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="write.css" rel="stylesheet">
+    <script src="write.js" type="text/javascript"></script>
+
+</head>
+<body>
+<!--头部导航栏-->
+<div class="top">
+    <img id="logo" src="image/logo.png" >
+    <ul id="menu">
+        <li>首页</li>
+        <li>个人主页</li>
+        <li>用户中心</li>
+    </ul>
+    <ul id="top_bar">
+        <li>注册</li>
+        <li>|</li>
+        <li onclick="golog()">登录</li>
+    </ul>
+    <div style="clear: both"></div>
+
+</div>
+<!--搜索框-->
+<div id="search" >
+    <div id="search-circle" onmouseover="searchon()" onmouseout="searchout()">
+        <img src="image/icon_search.png">
+        <input name="search-input"  id="search-input" type="text" placeholder="请输入搜索内容">
+    </div>
+
+</div>
+<!--通知-->
+<div id="message">
+    <div id="message_text">您有1条通知哦~点我来看看吧</div>
+    <img src="image/message_pic2.png">
+</div>
+<div id="body">
+    <div id="title">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="buttonText">选择趣点</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" onclick="shows($(this).text())">游戏天地</a></li>
+                <li><a href="#" onclick="shows($(this).text())">产品运营</a></li>
+                <li><a href="#" onclick="shows($(this).text())">数码世界</a></li>
+                <li><a href="#" onclick="shows($(this).text())">编程语言</a></li>
+            </ul>
+        </div>
+        <script>
+            function shows(a) {
+                $('.buttonText').text(a)
+            }
+        </script>
+        <div id="article-title">
+            <textarea id="article" placeholder="文章标题：一句话说明你想要分享的内容..."></textarea>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div id="text-box"><textarea id="text" placeholder="内容：写下您要分享的内容..."></textarea></div>
+    <button id="btn-image" onclick="subimg()">上传图片</button>
+    <div id="image-box">
+        <img src="image/userlogo4.jpg">
+        <img src="image/userlogo4.jpg">
+    </div>
+    <div id="button-box">
+        <button class="icon-button" id="btn-quxiao">取消</button>
+        <button class="icon-button" id="btn-submit">发布</button>
+    </div>
+    <div style="clear: both"></div>
+</div>
+</body>
+</html>
